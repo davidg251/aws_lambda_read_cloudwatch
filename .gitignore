@@ -1,0 +1,8 @@
+**/**/package
+*.zip
+.terraform/
+lambda_function/lambda_function
+.terraform.*
+*.json
+terraform.tfstate
+terraform.tfstate.backup
