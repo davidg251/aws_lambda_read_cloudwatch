@@ -1,5 +1,5 @@
 locals {}
-
+//"logs:GetLogRecord"
 
 resource "aws_iam_role_policy" "cloudwatch_policy" {
   name = "read-cloudwatch-policy"
@@ -8,7 +8,7 @@ resource "aws_iam_role_policy" "cloudwatch_policy" {
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [{
-          Action   = ["logs:GetLogEvents", "logs:GetLogRecord"]
+          Action   = ["logs:GetLogEvents"]
           Effect   = "Allow"
           Resource = "${aws_cloudwatch_log_stream.target_stream.arn}"
     }]
